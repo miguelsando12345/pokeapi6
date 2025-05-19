@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pokédex GO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
-    <main class="container">
-      <h1>Pokédex GO</h1>
+    <div class="container">
+      <h1>Pokedex</h1>
 
-      <form id="search-form">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Nombre o número..."
-          autocomplete="off"
-        />
-        <button type="submit">Buscar</button>
-      </form>
+      <div class="cards">
+        <div class="card one"></div>
 
-      <section id="pokemon-display"></section>
-
-      <div class="nav-buttons">
-        <button id="prev-btn">Anterior</button>
-        <button id="next-btn">Siguiente</button>
+        <div class="card two">
+          <input
+            type="text"
+            id="pokemonInput1"
+            placeholder="Nombre o Numero de pokemón"
+          />
+          <br />
+          <button onclick="buscarPokemon(1)">Buscar Pokemón</button>
+          <div id="pokemonInfo1"></div>
+        </div>
+        <div class="card three">
+          <input
+            type="text"
+            id="pokemonInput2"
+            placeholder="Nombre o Numero de pokemón"
+          />
+          <br />
+          <button onclick="buscarPokemon(2)">Buscar Pokemón</button>
+          <div id="pokemonInfo2"></div>
+        </div>
       </div>
-    </main>
-
+    </div>
     <script src="./assets/main.js"></script>
   </body>
 </html>
